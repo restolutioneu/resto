@@ -3,96 +3,96 @@
 
 ## Table of contents
 - [Restolution JSON API protocol](#soft-contact-json-api-protocol)
-  * [Introduction](#introduction)
-  * [Overview](#overview)
-  * [Technical description](#technical-description)
-  * [Basic access authentication](#basic-access-authentication)
-  * [Common objects](#common-objects)
-    + [Client](#client) 
-    + [Restaurant](#restaurant)
-    + [Unit](#unit)
-    + [Cash register](#cash_register)
-    + [Contact](#contact)
-    + [Open Hours](#open-hours)
-    + [Open Hour](#open-hour)
-    + [Menu](#menu)
-    + [Article](#article)
-    + [Extended Article](#extendedarticle)
-    + [Extended Article (import)](#extendedarticle_import)
-    + [Content Article](#contentarticle)
-    + [Price List](#pricelist)
-    + [Price](#price)
-    + [Article Option](#article-option)
-    + [Article Options / Chosen Options](#article-options---chosen-options) 
-    + [Receipt](#receipt)
-    + [Receipt Row](#receipt-row)
-    + [Discount](#discount)
-    + [Payment Row](#payment-row)
-    + [Customer](#customer)
-    + [Supplier](#supplier)
-    + [Card](#card)
-    + [Printer](#printer)
-    + [Bookkeeping Row](#bookkeeping-row)
-    + [Campaign](#campaign)
-    + [Campaign Unit Row](#campaign-unit-row)
-    + [Campaign Article Row](#campaign-article-row)
-    + [Order](#order)
-    + [Order Row](#orderrow)
-    + [Delivery Note](#deliverynote)
-    + [Delivery Note Row](#deliverynoterow)
-    + [Transfer](#transfer)
-    + [Transfer Row](#transferrow)
-    + [Wastage](#wastage)
-    + [Wastage Row](#wastagerow)
-    + [Inventory](#inventory)
-    + [Inventory Row](#inventoryrow)
-    + [Storage Value](#storagevalue)
-    + [Employee](#employee)
-    + [Time Tracking](#timetracking)
-    + [RestoCoin Card](#restocoincard)
-    + [RestoCoin Card Event](#restocoincardevent)
-  * [Available Methods](#available-methods)
-    + [listClients](#listclients)
-    + [listRestaurants](#listrestaurants)
-    + [getReceipts](#getreceipts)
-    + [getBookkeepingRows](#getbookkeepingrows)
-    + [saveReceipts](#savereceipts)
-    + [listCustomers](#listcustomers)
-    + [importCustomers](#importcustomers)
-    + [importSuppliers](#importsuppliers)
-    + [listCards](#listcards)
-    + [importCards](#importcards)
-    + [listCampaigns](#listCampaigns)
-    + [getOrders](#getorders)
-    + [getDeliveryNotes](#getdeliverynotes)
-    + [getTransfers](#gettransfers)
-    + [getWastages](#getwastages)
-    + [getInventories](#getinventories)
-    + [getArticles](#getarticles)
-    + [importArticles](#importarticles)
-    + [getStorageValues](#getstoragevalues)
-    + [listEmployees](#listemployees)
-    + [importEmployees](#importemployees)
-    + [importTimeTrackings](#importtimetrackings)
-    + [listRestoCoinCards](#listrestocoincards)
-    + [importRestoCoinCards](#importrestocoincards)
-    + [addRestoCoinCardEvent](#addrestocoincardevent)
-    + [listRestoCoinCardEvents](#listrestocoincardevents)
-    
-  * [Receipt types](#receipt-types)
-  * [Discount methods](#discount-methods)
-  * [Customer types](#customer-types)
-  * [Customer invoicing methods](#customer-invoicing-methods)
-  * [Customer invoicing periods](#customer-invoicing-periods)
-  * [Customer invoice contents](#customer-invoice-contents)
-  * [Card types](#card-types)
-  * [Version history](#version-history)
-  * [Article main type](#article_maintype)
-  * [Article sub type](#article_subtype)
-  * [Article link price type](#article_link_pricetype)
-  * [Employee types](#employee-types)
-  * [Card types](#card-types)
-  * [Card statuses](#card-statuses)
+    * [Introduction](#introduction)
+    * [Overview](#overview)
+    * [Technical description](#technical-description)
+    * [Basic access authentication](#basic-access-authentication)
+    * [Common objects](#common-objects)
+        + [Client](#client)
+        + [Restaurant](#restaurant)
+        + [Unit](#unit)
+        + [Cash register](#cash_register)
+        + [Contact](#contact)
+        + [Open Hours](#open-hours)
+        + [Open Hour](#open-hour)
+        + [Menu](#menu)
+        + [Article](#article)
+        + [Extended Article](#extendedarticle)
+        + [Extended Article (import)](#extendedarticle_import)
+        + [Content Article](#contentarticle)
+        + [Price List](#pricelist)
+        + [Price](#price)
+        + [Article Option](#article-option)
+        + [Article Options / Chosen Options](#article-options---chosen-options)
+        + [Receipt](#receipt)
+        + [Receipt Row](#receipt-row)
+        + [Discount](#discount)
+        + [Payment Row](#payment-row)
+        + [Customer](#customer)
+        + [Supplier](#supplier)
+        + [Card](#card)
+        + [Printer](#printer)
+        + [Bookkeeping Row](#bookkeeping-row)
+        + [Campaign](#campaign)
+        + [Campaign Unit Row](#campaign-unit-row)
+        + [Campaign Article Row](#campaign-article-row)
+        + [Order](#order)
+        + [Order Row](#orderrow)
+        + [Delivery Note](#deliverynote)
+        + [Delivery Note Row](#deliverynoterow)
+        + [Transfer](#transfer)
+        + [Transfer Row](#transferrow)
+        + [Wastage](#wastage)
+        + [Wastage Row](#wastagerow)
+        + [Inventory](#inventory)
+        + [Inventory Row](#inventoryrow)
+        + [Storage Value](#storagevalue)
+        + [Employee](#employee)
+        + [Time Tracking](#timetracking)
+        + [RestoCoin Card](#restocoincard)
+        + [RestoCoin Card Event](#restocoincardevent)
+    * [Available Methods](#available-methods)
+        + [listClients](#listclients)
+        + [listRestaurants](#listrestaurants)
+        + [getReceipts](#getreceipts)
+        + [getBookkeepingRows](#getbookkeepingrows)
+        + [saveReceipts](#savereceipts)
+        + [listCustomers](#listcustomers)
+        + [importCustomers](#importcustomers)
+        + [importSuppliers](#importsuppliers)
+        + [listCards](#listcards)
+        + [importCards](#importcards)
+        + [listCampaigns](#listCampaigns)
+        + [getOrders](#getorders)
+        + [getDeliveryNotes](#getdeliverynotes)
+        + [getTransfers](#gettransfers)
+        + [getWastages](#getwastages)
+        + [getInventories](#getinventories)
+        + [getArticles](#getarticles)
+        + [importArticles](#importarticles)
+        + [getStorageValues](#getstoragevalues)
+        + [listEmployees](#listemployees)
+        + [importEmployees](#importemployees)
+        + [importTimeTrackings](#importtimetrackings)
+        + [listRestoCoinCards](#listrestocoincards)
+        + [importRestoCoinCards](#importrestocoincards)
+        + [addRestoCoinCardEvent](#addrestocoincardevent)
+        + [listRestoCoinCardEvents](#listrestocoincardevents)
+
+    * [Receipt types](#receipt-types)
+    * [Discount methods](#discount-methods)
+    * [Customer types](#customer-types)
+    * [Customer invoicing methods](#customer-invoicing-methods)
+    * [Customer invoicing periods](#customer-invoicing-periods)
+    * [Customer invoice contents](#customer-invoice-contents)
+    * [Card types](#card-types)
+    * [Version history](#version-history)
+    * [Article main type](#article_maintype)
+    * [Article sub type](#article_subtype)
+    * [Article link price type](#article_link_pricetype)
+    * [Employee types](#employee-types)
+    * [Card types](#card-types)
+    * [Card statuses](#card-statuses)
 
 
 <a name="introduction"></a>
@@ -219,7 +219,7 @@ A cash register used in a Restaurant in Restolution
 
 <a name="open-hours"></a>
 ### Open hours
-Contains an array of ``<Weekday>`` that can be _"Monday"_, _"Tuesday"_, _"Wednesday"_, _"Thursday"_, _"Friday"_, _"Saturday"_ or _"Sunday"_. All 7 weekdays are always included. 
+Contains an array of ``<Weekday>`` that can be _"Monday"_, _"Tuesday"_, _"Wednesday"_, _"Thursday"_, _"Friday"_, _"Saturday"_ or _"Sunday"_. All 7 weekdays are always included.
 
 * ``<Weekday>`` - an array of Open hour objects. An empty array means that the restaurant is closed for that day.
 
@@ -260,7 +260,7 @@ Articles correspond to active sale articles in Restolution, belonging to the ass
   <a name="extendedarticle"></a>
 ### Extended Article
 
-The articles returned by the ``getArticles``  method are objects of  ``ExtendedArticle`` and contain more fields than the ``Article`` object returned in the ``getRestaurants`` method. 
+The articles returned by the ``getArticles``  method are objects of  ``ExtendedArticle`` and contain more fields than the ``Article`` object returned in the ``getRestaurants`` method.
 
 * ``articleUUID`` -  globally unique identifier for this article (a type 4 UUID as specified by RFC 4122)
 * ``articleName`` - article name
@@ -296,7 +296,7 @@ The articles returned by the ``getArticles``  method are objects of  ``ExtendedA
 * ``articleContents`` - Contents of a storage or recipe article as a list of [Content Articles](#contentarticle).
 * ``prices`` - A list of [Price Lists](#pricelist) that are active for this article.
 * ``articleLinks`` - A list of [Content Articles](#contentarticle) that are sold when this article is sold.
-* ``articleLinkPriceType`` - How the price of this link article should be calculated. Given as a [Article Link Price type](#article_link_pricetype) 
+* ``articleLinkPriceType`` - How the price of this link article should be calculated. Given as a [Article Link Price type](#article_link_pricetype)
 * ``eans`` - EAN codes of the article given as an array of strings.
 * ``kitchenPrintingGroupID`` - Kitchen printing group ID of the article
 * ``kitchenPrintingGroupName`` - Kitchen printing group name of the article
@@ -452,7 +452,7 @@ Every third party has a reserved payment code (or codes) for any payments they h
 * ``transactionId`` - optional transaction ID from payment authorizer
 * ``transactionTimestamp`` - optional timestamp from payment authorizer
 * ``accountCode`` - optional code of the Bookkeeping account that this payment row belongs to, see also ``includeAccountingInfo`` in [getReceipts](#getreceipts)
-* ``cardLastDigits`` - optional last digits of payment card, usually 4 last digits, , see also ``includePaymentTerminalTransactionData`` in [getReceipts](#getreceipts) 
+* ``cardLastDigits`` - optional last digits of payment card, usually 4 last digits, , see also ``includePaymentTerminalTransactionData`` in [getReceipts](#getreceipts)
 * ``paymentFilingCode`` - optional payment filing code.
 * ``paymentTerminalTransactionNumber`` - optional payment terminal transaction number.
 * ``transactionCertificate`` - optional Transaction Certificate (TC) from payment terminal
@@ -466,8 +466,11 @@ See also [listCustomers](#listcustomers).
 
 * ``customerNumber`` _[string, max 20 chars, required]_ - customer ID, customer number in Restolution
 * ``customerName`` _[string, max 255 chars, required]_- customer name
+* ``clientName`` _[string, optional]_ - client name that this customer belongs to. If used in [importCustomers](#importcustomers), the customer will only be imported to this client and respectively if missing, the customer will be imported to all clients. Included in [listCustomers](#listcustomers) responses when available.
 * ``clientUUID`` _[string, optional]_ - client UUID that this customer belongs to. If used in [importCustomers](#importcustomers), the customer will only be imported to this client and respectively if missing, the customer will be imported to all clients.
 * ``customerUUID`` _[string, optional]_ - customer UUID. If used in [importCustomers](#importcustomers), the import will only affect a customer with this customer UUID in Restolution. If used in [saveReciepts](#saveReceipts), this will override customerNumber when selecting customer for imported receipt.
+* ``customerGroupNumber`` _[integer, optional]_ - customer group number. If used in [importCustomers](#importcustomers), the customer will be assigned to the Customer group with this number. If omitted, the existing customer group is not changed. A ``null`` value removes the customer group. Included in [listCustomers](#listcustomers) responses when the customer has a group.
+* ``customerGroupName`` _[string, optional]_ - customer group name. Included in [listCustomers](#listcustomers) responses when the customer has a group.
 * ``active`` _[boolean, optional]_ - flag to indicate whether customer should be active or not in Restolution (default = true)
 * ``type`` _[string, optional]_ - customer type, see [Customer types](#customer-types). Defaults to "LUNCH" for new customer if not given.
 * ``comment`` _[string, max 255 chars, optional]_ - additional comment about customer
@@ -483,10 +486,14 @@ See also [listCustomers](#listcustomers).
 * ``invoiceContent`` _[string, optional]_ - setting how the invoiced receipts should be arranged into invoices, see [Customer invoice contents](#customer-invoice-contents)
 * ``invoiceDeliveryAddress`` _[string, max 255 chars, optional]_ - customer invoice delivery address
 * ``invoiceDeliveryEmail`` _[string, max 255 chars, optional]_ - customer invoice delivery email address
+* ``addInvoiceFeeToAutoGenerated`` _[boolean, optional]_ - add invoice fee to automatically generated invoices
+* ``paymentDays`` _[integer, optional]_ - number of payment days for invoices
+* ``negativeReceiptsAsSeparateInvoices`` _[boolean, optional]_ - generate negative receipts as separate invoices
 * ``einvoiceReceiver`` _[string, max 50 chars, optional]_ - customer e-invoice receiver
 * ``einvoiceReceiverIntermediator`` _[string, max 50 chars, optional]_ - customer e-invoice receiver intermediator
 * ``subventionsOnceAMonth`` _[boolean, optional]_ - true/false to indicate that subvention and commission invoices should be generated on the 1st day of every month (default = true)
 * ``subventionInvoiceContent`` _[string, optional]_ - setting how the subvention and commission receipts should be arranged into invoices, see [Customer invoice contents](#customer-invoice-contents)
+* ``synchronizeToBestorante`` _[boolean, optional]_ - synchronize customer to Bestorante
 * ``contact`` _[Contact, optional] - customer contact information as a Contact object. This object is omitted in results if no contact fields have been set in Restolution. See [Contact](#contact).
 * ``restaurantIDs`` _[array, optional]_ - array of Restaurant IDs where this Customer is active. Note: Used only in [importCustomers](#importcustomers). If not defined, the customer will be set active in every restaurant.
 * ``businessUnitUUIDs`` _[array, optional]_ - array of Business Unit UUIDs of restaurants where this Customer is active. Note: Used only in [importCustomers](#importcustomers). If not defined, the customer will be set active in every restaurant.
@@ -549,7 +556,7 @@ See also [listCards](#listcards).
 * ``vatCode`` - VAT code
 * ``startAmount`` - start amount for monthly storage change without VAT in cents, see [getBookkeepingRows](#getbookkeepingrows)
 * ``endAmount`` - end amount for monthly storage change without VAT in cents, see [getBookkeepingRows](#getbookkeepingrows)
-* ``differenceAmount`` - difference amount for monthly storage change without VAT in cents, see [getBookkeepingRows](#getbookkeepingrows) 
+* ``differenceAmount`` - difference amount for monthly storage change without VAT in cents, see [getBookkeepingRows](#getbookkeepingrows)
 
 <a name="campaign"></a>
 ### Campaign
@@ -563,7 +570,7 @@ See also [listCampaigns](#listCampaigns).
 * ``weekdayMon``,``weekdayTue``,``weekdayWed``,``weekdayThu``,``weekdayFri``,``weekdaySat``,``weekdaySun`` - flags indicating weekdays when when this campaign is active during the ``fromDate``-``untilDate``
 * ``startTime``,``endTime`` - time period of the saleday in form of ``hh:mm`` when this campaign is active, if not set then campaign is active for whole saleday
 * ``fromDate`` - date when the campaign begins
-* ``untilDate`` - date when the campaign ends 
+* ``untilDate`` - date when the campaign ends
 * ``units`` - an array of [Campaign Unit Row](#campaign-unit-row) objects, showing units where this campaign is used
 * ``articles`` - an array of [Campaign Article Row](#campaign-article-row) objects, showing articles included in this campaign
 
@@ -607,7 +614,7 @@ The orders returned by the "getOrders" method are objects of "Order" which conta
 * ``supplierNumber`` - number of the Supplier of this Order
 * ``supplierName`` - name of the Supplier of this Order
 * ``supplierRegNr`` - the company registration number (Business ID) of the Supplier of this Order
-* ``orderRows`` - array of order rows 
+* ``orderRows`` - array of order rows
 * ``discountCode`` - discount tag on transaction level, can be percentage or fixed sum discount
 
 <a name="orderrow"></a>
@@ -625,7 +632,7 @@ The order rows contain on article level the quantities and purchase prices of th
 * ``purchasePriceWithTax`` - The purchase price of a base unit of this order row's article including tax
 * ``purchaseTax`` - The purchase tax percentage applied to the purchase of this order row's article. Given as a whole number if possible, decimal number otherwise, e.g 24% is given as 24 and 25.5% as 25.5.
 * ``discountCode`` - discount tag on line level, can be percentage or fixed sum discount
-<a name="deliverynote"></a>
+  <a name="deliverynote"></a>
 ### Delivery Note
 
 The delivery notes returned by the "getDeliveryNotes" method are objects of "Delivery Note" which contains the rows of the delivery note as an array of [Delivery Note Rows](#deliverynoterow).
@@ -643,7 +650,7 @@ The delivery notes returned by the "getDeliveryNotes" method are objects of "Del
 * ``status`` - the status of this delivery note, can be one of IN_PROGRESS, DONE, VERIFIED, TEMPLATE.
 * ``comment`` - a free text domment of this delivery note
 * ``supplierNumber`` - number of the Supplier of this DeliveryNote
-* ``supplierName`` - name of the Supplier of this DeliveryNote 
+* ``supplierName`` - name of the Supplier of this DeliveryNote
 * ``supplierRegNr`` - the company registration number (Business ID) of the Supplier of this DeliveryNote
 * ``deliveryNoteRows`` - array of delivery note rows
 
@@ -676,7 +683,7 @@ The transfers returned by the "getTransfers" method are objects of "Transfer" wh
 * ``toStorageName`` - name of the storage that this transfer added to
 * ``userName`` - name of user who created this transfer
 * ``verifier`` - name of user who verified this transfer
-* ``status`` - the status of this transfer, can be one of IN_PROGRESS, DONE, VERIFIED. 
+* ``status`` - the status of this transfer, can be one of IN_PROGRESS, DONE, VERIFIED.
 * ``comment`` - a comment about this transfer
 * ``transferRows`` - array of transfer rows
 
@@ -706,7 +713,7 @@ The wastages returned by the [getWastages](#getwastages) method are objects of "
 * ``businessUnitUUID`` - globally unique identifier of the Restolution business unit that this wastage added to (a type 4 UUID as specified by RFC 4122)
 * ``toStorageName`` - name of the storage that this wastage added to
 * ``userName`` - name of user who created this wastage
-* ``status`` - the status of this wastage, can be one of IN_PROGRESS, DONE, VERIFIED. 
+* ``status`` - the status of this wastage, can be one of IN_PROGRESS, DONE, VERIFIED.
 * `wastageRows`` - array of wastage rows
 
 <a name="wastagerow"></a>
@@ -741,7 +748,7 @@ The inventories returned by the [getInventories](#getinventories) method are obj
 * ``storageName`` - name of the storage that this inventory was made for
 * ``userName`` - name of user who created this inventory
 * ``verifier`` - name of user who verified this inventory
-* ``status`` - the status of this inventory, can be one of IN_PROGRESS, DONE, VERIFIED. 
+* ``status`` - the status of this inventory, can be one of IN_PROGRESS, DONE, VERIFIED.
 * ``comment`` - a comment about this inventory
 * ``inventoryRows`` - array of inventory rows
 
@@ -1323,8 +1330,8 @@ parameters:
 * ``restaurantIDs`` - array containing restaurantIDs, ignored if parameter _businessUnitUUIDs_ is given
 * ``businessUnitUUIDs`` - array containing business unit UUIDs, overrides parameter _restaurantIDs_
 * ``salesReadFromDate`` - include sales read to back office since given date,
-        if not given, sales read to back office since last call to ``getReceipts`` will be returned
-* ``salesReadUntilDate`` - include sales read to back office before given date, defaults to current timestamp. The period limited by ``salesReadFromDate`` and ``salesReadUntilDate`` cannot exceed 7 days.	
+  if not given, sales read to back office since last call to ``getReceipts`` will be returned
+* ``salesReadUntilDate`` - include sales read to back office before given date, defaults to current timestamp. The period limited by ``salesReadFromDate`` and ``salesReadUntilDate`` cannot exceed 7 days.
 * ``receiptTimeFromDate`` - include receipts with timestamp equal or later than given date. Overrides ``salesReadFromDate``.
 * ``receiptTimeUntilDate`` - include receipts with timestamp equal or older than given date
 * ``includeSaleRows`` - include sales receipt rows in the results
@@ -1581,7 +1588,7 @@ parameters:
 
 * ``costCentreCodes`` - array containing cost centre codes
 * ``salesReadFromDate`` - include sales read to back office since given date
-        if not given, sales read to back office since last call to ``getBookkeepingRows`` will be returned
+  if not given, sales read to back office since last call to ``getBookkeepingRows`` will be returned
 * ``receiptTimeFromDate`` - include receipts with timestamp equal or later than given date. Overrides ``salesReadFromDate``
 * ``receiptTimeUntilDate`` - include receipts with timestamp equal or older than given date
 * ``reconciliatedDatesOnly`` - true / false if results should include only reconciliated dates
@@ -1733,8 +1740,9 @@ sample response:
 <a name="listcustomers"></a>
 ### listCustomers
 
-For listing customers available to the given API Key. 
+For listing customers available to the given API Key.
 If several Restolution clients share the same API Key, customers from all clients will be listed. Customers with same number will be listed as separate objects.
+Use ``clientNames`` or ``clientUUIDs`` to limit the listing to specific Restolution clients.
 
 See also [Customer](#customer).
 
@@ -1744,9 +1752,11 @@ parameters:
 * ``businessUnitUUIDs`` - array containing business unit UUIDs whose customers to include, overrides parameter restaurantIDs
 * ``customerNumbers`` - array of customer numbers to include
 * ``customerUUIDs`` - array of customer UUIDs to include, overrides parameter customerNumbers
+* ``clientNames`` - array of client names whose customers to include
+* ``clientUUIDs`` - array of client UUIDs whose customers to include
 * ``includeContact`` - flag to indicate whether customer contact information should be included
 * ``activeOnly`` - flag to indicate whether only active customers should be included
-* ``modifiedSince`` - include only customers modified since this timestamp
+* ``modifiedSince`` - include only customers modified since this ISO 8601 timestamp
 
 response:
 
@@ -1783,7 +1793,10 @@ sample response:
                 "customerNumber": "1",
                 "customerName": "CUBA IMPORT EXPORT",
                 "customerUUID": "a1ad841e-b7f6-472d-b795-95d075929ef7",
-				            "clientName": "S&C Testiravintola",
+                "customerGroupNumber": 10,
+                "customerGroupName": "Contract customers",
+                "clientName": "S&C Testiravintola",
+                "clientUUID": "8230efbb-5c5d-4432-af4f-5745a6563072",
                 "comment": "testikommentti 200",
                 "allowInvoicing": true,
                 "referenceNumber": "111",
@@ -1795,22 +1808,27 @@ sample response:
                 "invoiceMethod": "AUTO_WITH_CONFIRMATION",
                 "invoicePeriod": "MONTHLY",
                 "invoiceContent": "ALL_RECEIPTS_IN_SAME",
+                "addInvoiceFeeToAutoGenerated": true,
+                "paymentDays": 14,
+                "negativeReceiptsAsSeparateInvoices": false,
                 "subventionsOnceAMonth": true,
-                "active": true
+                "synchronizeToBestorante": true,
+                "active": true,
                 "contact": {
                     "emailAddress": "email@email.com",
                     "street": "Salakuljettajankatu 8",
                     "city": "Hki",
                     "postIndex": "00001",
                     "mobilePhoneNr": "999999",
-                    "phoneNr": "000000"
+                    "phoneNr": "000000",
+                    "registrationNr": "1234567-8"
                 }
             },
             {
                 "customerNumber": "4",
                 "customerName": "MAKKE OY",
                 "customerUUID": "35c21d34-e5c1-45b0-b6b8-a0db9f645fb4",
-				            "clientName": "S&C Testiravintola",
+                "clientName": "S&C Testiravintola",
                 "allowInvoicing": true,
                 "referenceNumber": "123",
                 "type": "LUNCH",
@@ -1828,7 +1846,7 @@ sample response:
                 "customerNumber": "8",
                 "customerName": "VAKIO SÄÄTÄJÄT KY",
                 "customerUUID": "a21cedb0-5a07-4edd-951b-06e960f44100",
-				            "clientName": "Il Pastarito",
+                "clientName": "Il Pastarito",
                 "allowInvoicing": false,
                 "referenceNumber": "124",
                 "type": "LUNCH_AND_LOYALTY",
@@ -1847,14 +1865,16 @@ sample response:
 <a name="importcustomers"></a>
 ### importCustomers
 
-For importing new and editing existing customers. 
+For importing new and editing existing customers.
 If several Restolution clients share the same API Key, the same customers will be imported identically to all clients.
+Use ``clientNames`` to limit the import to specific Restolution clients. A customer-specific ``clientName`` or ``clientUUID`` imports that customer only to the matching client.
 See also [Customer](#customer).
 
 parameters:
 
 * ``customers`` - array of Customer objects
 * ``clientNames`` - array of Client names of clients where the customers should be imported. Note: If this parameter is used, an imported customer can still have the clientName field to limit import of that particular customer to only one client, but the value has to be one of the clientNames values, otherwise an error will be returned.
+* ``synchronizeToBestorante`` - optional flag to set ``synchronizeToBestorante`` for all imported customers. Overrides customer-specific ``synchronizeToBestorante`` values when provided.
 
 response:
 
@@ -1878,10 +1898,14 @@ sample request:
         "customers": [
             {
                 "customerNumber": "1",
+                "customerUUID": "a1ad841e-b7f6-472d-b795-95d075929ef7",
                 "customerName": "CUBA IMPORT EXPORT",
+                "customerGroupNumber": 10,
+                "clientName": "S&C Testiravintola",
+                "clientUUID": "8230efbb-5c5d-4432-af4f-5745a6563072",
                 "comment": "testikommentti 200",
                 "allowInvoicing": true,
-                "referencenumber": "111",
+                "referenceNumber": "111",
                 "type": "LUNCH_AND_LOYALTY",
                 "additionalName": "testi testi testi",
                 "contactPerson": "xxxxx",
@@ -1890,7 +1914,11 @@ sample request:
                 "invoiceMethod": "AUTO_WITH_CONFIRMATION",
                 "invoicePeriod": "MONTHLY",
                 "invoiceContent": "ALL_RECEIPTS_IN_SAME",
+                "addInvoiceFeeToAutoGenerated": true,
+                "paymentDays": 14,
+                "negativeReceiptsAsSeparateInvoices": false,
                 "subventionsOnceAMonth": true,
+                "synchronizeToBestorante": true,
                 "active": true,
                 "contact": {
                     "emailAddress": "email@email.com",
@@ -1898,7 +1926,8 @@ sample request:
                     "city": "Hki",
                     "postIndex": "00001",
                     "mobilePhoneNr": "999999",
-                    "phoneNr": "000000"
+                    "phoneNr": "000000",
+                    "registrationNr": "1234567-8"
                 },
                 "restaurantIDs":[
                     "101","102"
@@ -2219,14 +2248,14 @@ If several Restolution clients share the same API Key, campaigns from all client
 See also [Campaign](#campaign).
 
 parameters:
-* ``campaignFromDate`` - for filtering campaign ``fromDate`` 
-* ``campaignUntilDate`` - for filtering campaign ``untilDate`` 
+* ``campaignFromDate`` - for filtering campaign ``fromDate``
+* ``campaignUntilDate`` - for filtering campaign ``untilDate``
 
 response:
 
 * ``campaigns`` - array of [Campaign](#campaign) objects
-* ``campaignsActiveForDate`` - returned in case of (2), showing time for which active campaigns are returned  
-* ``campaignsFromDate`` - returned in case of (3),(4),(5), showing used from time for filtering 
+* ``campaignsActiveForDate`` - returned in case of (2), showing time for which active campaigns are returned
+* ``campaignsFromDate`` - returned in case of (3),(4),(5), showing used from time for filtering
 * ``campaignsUntilDate`` - returned in case of (3),(4),(5), showing used to time for filtering
 
 sample request:
@@ -2319,7 +2348,7 @@ sample response:
 ```
 <a name="getorders"></a>
 ### getOrders
-Gets all orders from Restolution. The orders are returned as an array of [Orders](#order). 
+Gets all orders from Restolution. The orders are returned as an array of [Orders](#order).
 The method mimics the the parameters and data in Order Reports in Restolution.
 
 parameters:
@@ -2840,7 +2869,7 @@ response:
 
 * ``articles`` - array of articles containing article sale and storage data, contents, links and prices
 
-sample request: 
+sample request:
 
 ```json
 {
@@ -3191,7 +3220,7 @@ Gets all storage values from restolution. The storage values are returned as an 
 
 parameters:
 
-*  ``saleDate`` - get storage values for this sale date. This parameter is required. 
+*  ``saleDate`` - get storage values for this sale date. This parameter is required.
 *  ``showZeros`` - option to include also storage values for articles that do not have any recorded value in the database
 *  ``calculateStartOfMonth`` - option to include the storage quantity at the start of the month of the given sale date
 *  ``truncateStockValueCalc`` - option to use current purchase price of the article of each storage value instead of the purchase price calculated from storage transations (delivery notes)
@@ -3201,7 +3230,7 @@ response:
 
 * ``storageValues`` - array of StorageValue objects
 
-sample request: 
+sample request:
 
 ```json
 {
@@ -3291,7 +3320,7 @@ sample response:
 
 <a name="listemployees"></a>
 ## listEmployees
-For listing existing employees. The employees are listed as an array of [Employee](#employee) objects. 
+For listing existing employees. The employees are listed as an array of [Employee](#employee) objects.
 If several Restolution clients share the same API Key, the same employee will be listed only once.
 
 parameters:
@@ -3406,12 +3435,12 @@ sample response:
 
 <a name="importtimetrackings"></a>
 ## importTimeTrackings
-For importing new time trackings that represent performed work hours in a unit of a restaurant. The time trackings are imported as an array of [TimeTracking](#timetracking) objects. Each time tracking object has it's employee number and unit UUID and the import will update the time tracking of the clerk(s) in Restolution that are linked to the employee for the given unit. If any part of the imported time tracking (A) already exists for the clerk and unit in a previously stored time tracking (B), this part will be omitted, 
+For importing new time trackings that represent performed work hours in a unit of a restaurant. The time trackings are imported as an array of [TimeTracking](#timetracking) objects. Each time tracking object has it's employee number and unit UUID and the import will update the time tracking of the clerk(s) in Restolution that are linked to the employee for the given unit. If any part of the imported time tracking (A) already exists for the clerk and unit in a previously stored time tracking (B), this part will be omitted,
 i.e. the[ _union_](https://brilliant.org/wiki/sets-union-and-intersection-easy/)  (A ∪ B) of the existing and the new time tracking period will be stored in Restolution.
 If several Restolution clients share the same API Key, the time tracking import will affect all clients that have matching employee numbers and unit UUIDs. Note, however, that since the unit UUID is globally unique it is not possible for a single time tracking object to be imported to more than one unit (and client).
 
 parameters:
-* ```timeTrackings`` - array of [TimeTracking](#timetracking) objects 
+* ```timeTrackings`` - array of [TimeTracking](#timetracking) objects
 
 response:
 
@@ -3470,7 +3499,7 @@ For listing existing RestoCoin cards and balances. The cards are listed as an ar
 
 parameters:
 
-* ``includeFreeBalances`` - true/false to include free balances, i.e. balances without a card entity. These will be returned as [RestoCoin Card](#restocoincard) objects with only "cardNumber" and "balance". For an example, see the ```"cardNumber" : "555555"``` in the sample response below. 
+* ``includeFreeBalances`` - true/false to include free balances, i.e. balances without a card entity. These will be returned as [RestoCoin Card](#restocoincard) objects with only "cardNumber" and "balance". For an example, see the ```"cardNumber" : "555555"``` in the sample response below.
 * ``businessUnitUUIDs``- array of strings that are business unit UUIDs, see Restaurant.businessUnitUUID. This filters the cards and returns only cards that can be used in the given business units (Restaurants). An empty array will return only cards that can be used in all business units. If the parameter is not given or is null, all cards will be returned.
 * ``cashRegisterUUIDs`` - optional array of cash register UUID filters
 * ``status`` - optional card status filter, one of ``ACTIVE`` or ``DISABLED``
@@ -3486,7 +3515,7 @@ Notes:
 * ``changedOnly=true`` requires a non-empty ``customerNumber``.
 * ``changedOnly=true`` cannot be combined with ``cardNumbers``, ``first`` or ``last``.
 * If no earlier successful ``changedOnly=true`` request is stored for the same authenticated API user and ``customerNumber``, the effective ``changed since`` timestamp is one week before the current request time.
-* On successful ``changedOnly=true`` requests, the current request timestamp is stored for the same authenticated API user and ``customerNumber``. 
+* On successful ``changedOnly=true`` requests, the current request timestamp is stored for the same authenticated API user and ``customerNumber``.
 
 reponse:
 * ``cards`` - array of [RestoCoin Card](#restocoincard) objects.
@@ -3628,7 +3657,7 @@ sample response:
 
 <a name="importrestocoincards"></a>
 ### importRestoCoinCards
-Imports new and existing cards and balances to RestoCoin. RestoCoin enables online customer balances hosted on a separate microservice. RestoCoin has separate credentials and can not be accessed using JSON API credentials directly. For this reason enabling this feature requires a separate activation step to be performed by Restolution support: 
+Imports new and existing cards and balances to RestoCoin. RestoCoin enables online customer balances hosted on a separate microservice. RestoCoin has separate credentials and can not be accessed using JSON API credentials directly. For this reason enabling this feature requires a separate activation step to be performed by Restolution support:
 
 The JSON API link in Restolution for the API Key must be set up to have the following parameters to be able to make requests towards RestoCoin:
 
@@ -4004,7 +4033,7 @@ sample response:
 * ``ALL_RECEIPTS_IN_SAME`` - Receipts to same invoice per costcentre
 * ``INVOICE_PER_RECEIPT`` - Every receipt to separate invoice
 * ``ALL_RECEIPTS_IN_SAME_FOR_ALL`` - For subvention/commission receipts: All receipts are forced to same invoice over all costcentres. For regular receipts: same as ``ALL_RECEIPTS_IN_SAME``
-    
+
 <a name="card-types"></a>
 ## Card types
 
@@ -4027,7 +4056,7 @@ sample response:
 * ``FREE_ARTICLE``- When all articles of this campaign are sold together a defined free article is added to the receipt.
 * ``ADDITIONAL_SALE`` - When the triggering articles are sold in specified amounts a defined additional sale article will be added to the receipt with current price level.
 * ``REPORT`` - This campaign is for reporting purposes only.
-    
+
 <a name="campaign-sub-types"></a>
 ## Campaign sub types
 
@@ -4064,7 +4093,7 @@ sample response:
 * ``COMBINED`` - A sale article or storage article with content.
 * ``LINK`` - A link sale article is a sale article that triggers sales of other articles.
 * ``CONDIMENT`` - A condiment sale article is a modifier group that defines sale article choices made at the time of sale in the cash register.
-* ``ORDER_STORAGE`` - A storage article that can only be ordered to the restaurant and not used in storage jobs. 
+* ``ORDER_STORAGE`` - A storage article that can only be ordered to the restaurant and not used in storage jobs.
 * ``COMBINED_CONDIMENT`` - A sale article with contents and condiment article properties.
 
 <a name="article_link_pricetype"></a>
@@ -4142,7 +4171,7 @@ sample response:
 
 
 
-     
+
 <a name="version-history"></a>
 ## Version history
 
@@ -4193,4 +4222,4 @@ sample response:
 | 20.04.2026 | mats.antell@restolution.fi	  | Added "changedOnly" and previously missing parameters "cashRegisterUUIDs", "status", "customerNumber", "first", "last" to "listRestoCoinCards" |
 | 28.04.3026 | mats.antell@restolution.fi     | Added "addRestoCoinCardEvent" |
 | 20.05.2026 | mats.antell@restolution.fi	  | Changes to "listRestoCoinCardEvents": "cardNumbers" parameter optional |
-
+| 15.06.2026 | mats.antell@restolution.fi     | Added customer client filters, customer group, Bestorante synchronization and invoicing fields to customer import and listing documentation |
