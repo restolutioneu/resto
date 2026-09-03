@@ -4223,3 +4223,4 @@ sample response:
 | 28.04.3026 | mats.antell@restolution.fi     | Added "addRestoCoinCardEvent" |
 | 20.05.2026 | mats.antell@restolution.fi	  | Changes to "listRestoCoinCardEvents": "cardNumbers" parameter optional |
 | 15.06.2026 | mats.antell@restolution.fi     | Added customer client filters, customer group, Bestorante synchronization and invoicing fields to customer import and listing documentation |
+| 03.09.2026 | mats.antell@restolution.fi     | Updated JSON API URL |
