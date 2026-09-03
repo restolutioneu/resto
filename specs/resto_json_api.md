@@ -122,7 +122,7 @@ Note: When using Basic access authentication, the "apiKey" field is NOT required
 
 sample request code in Java:
 ```java
-	// url is the Restolution JSON API URL: https://restolution.fi/resto/api
+	// url is the Restolution JSON API URL: https://jsonapi.restolution.fi/resto/api
         HttpPost httpPost = new HttpPost(url); 
 
         List<BasicNameValuePair> parameters = new ArrayList<>();
