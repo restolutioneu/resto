@@ -51,7 +51,7 @@
         + [Time Tracking](#timetracking)
         + [RestoCoin Card](#restocoincard)
         + [RestoCoin Card Event](#restocoincardevent)
-        + [Table chart](#tableChart)
+        + [Table chart](#table_chart)
     * [Available Methods](#available-methods)
         + [listClients](#listclients)
         + [listRestaurants](#listrestaurants)
@@ -3985,7 +3985,7 @@ sample response:
 }
 ```
 
-<a name="tableChart>Table chart</a>
+<a name="table_chart>Table chart</a>
 ## Table chart used in SoftPos
 
 sample request:
