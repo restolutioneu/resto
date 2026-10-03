@@ -51,6 +51,7 @@
         + [Time Tracking](#timetracking)
         + [RestoCoin Card](#restocoincard)
         + [RestoCoin Card Event](#restocoincardevent)
+        + [Table chart](#tableChart)
     * [Available Methods](#available-methods)
         + [listClients](#listclients)
         + [listRestaurants](#listrestaurants)
@@ -3984,6 +3985,30 @@ sample response:
 }
 ```
 
+<a name="tableChart>Table chart</a>
+## Table chart used in SoftPos
+
+sample request:
+
+```json
+{
+  "timestamp": "2015-09-16T08:58:40Z",
+  "apiKey": "user_283764",
+  "requestID": "req_28376429",
+  "method": "getTableCharts",
+  "params": {
+    "cardNumbers": [
+      "123-456"
+    ]
+  }
+}
+```
+
+sample response:
+
+```json
+```
+
 <a name="receipt-types"></a>
 ## Receipt types
 
@@ -4170,57 +4195,5 @@ sample response:
 
 
 
-
-
-<a name="version-history"></a>
-## Version history
-
-| Date        | Author                            | Summary                      |
-| ----------- | --------------------------------- | ---------------------------- |
-| 17.4.2018  | mats.antell@soft-contact.fi        | Initial version              |
-| 18.4.2018  | mats.antell@soft-contact.fi        | Added Receipt.quickInvoice   |
-| 3.5.2018   | mats.antell@soft-contact.fi        | Added Card and related methods |
-| 4.5.2018   | mats.antell@soft-contact.fi        | Added Customer.restaurantIDs to importCustomers |
-| 2.1.2019   | mats.antell@soft-contact.fi        | Modified Restaurants.openHours |
-| 11.1.2019  | mats.antell@soft-contact.fi        | Added Receipt.sourceHash and 2 new parameters to getBookkeepingRows|
-| 30.1.2019  | mats.antell@soft-contact.fi        | Added ReceiptRow.additionalArticleName |
-| 14.3.2019  | mats.antell@soft-contact.fi        | Added businessUnitUUID to Restaurant and Receipt |
-| 20.3.2019  | mats.antell@soft-contact.fi        | Added registrationNr and companyName to Restaurant |
-| 27.3.2019  | mats.antell@soft-contact.fi        | Added customerUUID, removed customer import/export merging |
-| 28.10.2019 | ilkka.hyvarinen@kassamagneetti.fi  | Added status, includeAllRestaurants to Restaurant and listRestaurants |
-| 14.10.2020   | tt@soft-contact.fi       | Added Campaign and related methods |
-| 31.08.2021 | mats.antell@kassamagneetti.fi      | Added Article.structure and Article.amount |  
-| 14.11.2022 | mats.antell@restolution.fi         | Added Restaurant.units and Unit | 
-| 20.12.2022 | mats.antell@restolution.fi	  | Added customerReceiptsOnly parameter to getReceipts |
-| 19.04.2023 | mats.antell@restolution.fi         | Added salesReadUntilDate parameter to getReceipts |
-| 20.04.2023 | mats.antell@restolution.fi         | Added cardCustomData1-3 to Receipt and getReceipts |
-| 03.08.2023 | mats.antell@restolution.fi         | Added getBookkeepingRows changes for new parameter 'showMonthlyStorageData' |
-| 08.08.2023 | mats.antell@restolution.fi	  | Added getDeliveryNotes and related objects |
-| 08.08.2023 | mats.antell@restolution.fi	  | Added getArticles and related objects |
-| 08.08.2023 | mats.antell@restolution.fi	  | Added importArticles and related objects |
-| 08.08.2023 | mats.antell@restolution.fi	  | Added getStorageValues and related objects |
-| 08.08.2023 | mats.antell@restolution.fi	  | Added getTransfers and related objects and some general naming consistency improvements |
-| 08.08.2023 | mats.antell@restolution.fi	  | Added getWastages and related objects |
-| 08.08.2023 | mats.antell@restolution.fi	  | Added getInventories and related objects |
-| 08.08.2023 | mats.antell@restolution.fi	  | Added listEmployees and related objects |
-| 08.08.2023 | mats.antell@restolution.fi	  | Added importEmployees |
-| 08.08.2023 | mats.antell@restolution.fi	  | Added importEmployees and related objects |
-| 08.08.2023 | mats.antell@restolution.fi	  | Added listClients and related objects |
-| 09.08.2023 | mats.antell@restolution.fi	  | Added listRestoCoinCards and importRestoCoinCards and related objects |
-| 09.08.2023 | mats.antell@restolution.fi	  | Added Article data and image fields |
-| 09.08.2023 | mats.antell@restolution.fi	  | Add new parameter "includePaymentTerminalTransactionData" to getReceipts method |
-| 09.08.2023 | mats.antell@restolution.fi	  | Added Customer field descriptors |
-| 09.08.2023 | mats.antell@restolution.fi	  | Added PriceList, Price field descriptors, improved TOC order |
-| 31.08.2023 | mats.antell@restolution.fi	  | Added sample code for the Basic authentication |
-| 01.09.2023 | mats.antell@restolution.fi	  | Added registeredFromDate and registeredUntilDate to getDeliveryNotes |
-| 04.09.2023 | mats.antell@restolution.fi     | Added getOrders and Order and Order Row |
-| 25.09.2023 | mats.antell@restolution.fi     | Added Inventory.inventoryUUID |
-| 07.10.2024 | mats.antell@restolution.fi     | Added cash register listing to listRestaurants |
-| 05.03.2026 | mats.antell@restolution.fi     | Added method "importSuppliers" and parameter "includeAdditionalJson" to method "getReceipts" |
-| 18.03.2026 | mats.antell@restolution.fi     | Added supplier information to "getOrders" and "getDeliveryNotes" responses |
-| 20.04.2026 | mats.antell@restolution.fi     | Added "listRestoCoinCardEvents" and "RestoCoin Card Event" and "RestoCoin Card Event Type" |
-| 20.04.2026 | mats.antell@restolution.fi	  | Added "changedOnly" and previously missing parameters "cashRegisterUUIDs", "status", "customerNumber", "first", "last" to "listRestoCoinCards" |
-| 28.04.3026 | mats.antell@restolution.fi     | Added "addRestoCoinCardEvent" |
-| 20.05.2026 | mats.antell@restolution.fi	  | Changes to "listRestoCoinCardEvents": "cardNumbers" parameter optional |
-| 15.06.2026 | mats.antell@restolution.fi     | Added customer client filters, customer group, Bestorante synchronization and invoicing fields to customer import and listing documentation |
+documentation |
 | 03.09.2026 | mats.antell@restolution.fi     | Updated JSON API URL |
