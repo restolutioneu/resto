@@ -3988,6 +3988,28 @@ sample response:
 <a name="table_chart"></a>
 ### Table chart used in SoftPos
 
+* ``drawingID`` - ID of the room/drawing
+* ``colourIndex`` - base colour of the drawing
+* ``height`` - height of the drawing
+* ``width`` - width of the drawing
+* ``shapes`` - array of [Shape](#shape) objects
+
+<a name="shape"></a>
+### A shape belonging to table chart used in SoftPos
+
+* ``type`` - `UNDEFINED`, `RECTANGULAR`, `OVAL`
+* ``table`` - (optional) table number; alphanumeric
+* ``chair`` - (optional) chair number
+* ``x`` - X coordinate
+* ``y``- Y coordinate
+* ``height`` - height of the shape
+* ``width`` - width of the shape
+* ``rotation`` - rotation of the shape
+* ``colourIndex`` - colour of the shape
+* ``text`` - caption on the shape
+* ``action`` - (optional) action `NONE`, `TABLE`, `OPEN_CHART`, `BACK`
+* ``actionParameters`` - (optional) action parameters
+
 sample request:
 
 ```json
