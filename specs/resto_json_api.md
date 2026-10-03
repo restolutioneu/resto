@@ -3985,8 +3985,8 @@ sample response:
 }
 ```
 
-<a name="table_chart>Table chart</a>
-## Table chart used in SoftPos
+<a name="table_chart"></a>
+### Table chart used in SoftPos
 
 sample request:
 
@@ -4007,6 +4007,155 @@ sample request:
 sample response:
 
 ```json
+    [
+      {
+        "drawingID": "room-1",
+        "colourIndex": 15,
+        "height": 579,
+        "width": 792,
+        "shapes": [
+          {
+            "type": "OVAL",
+            "table": "1",
+            "chair": "1",
+            "x": 35,
+            "y": 75,
+            "width": 20,
+            "height": 20,
+            "rotation": 0,
+            "colourIndex": 11,
+            "text": "1",
+            "action": "TABLE",
+            "actionParameters": []
+          },
+          {
+            "type": "RECTANGLE",
+            "table": "1",
+            "x": 60,
+            "y": 70,
+            "width": 30,
+            "height": 55,
+            "rotation": 0,
+            "colourIndex": 6,
+            "text": "1",
+            "action": "TABLE",
+            "actionParameters": []
+          },
+          {
+            "type": "RECTANGLE",
+            "table": "1",
+            "chair": "2",
+            "x": 95,
+            "y": 75,
+            "width": 20,
+            "height": 20,
+            "rotation": 0,
+            "colourIndex": 11,
+            "text": "2",
+            "action": "TABLE",
+            "actionParameters": []
+          },
+          {
+            "type": "RECTANGLE",
+            "x": 732,
+            "y": 529,
+            "width": 50,
+            "height": 40,
+            "rotation": 0,
+            "colourIndex": 0,
+            "text": "Room 2",
+            "action": "OPEN_CHART",
+            "actionParameters": [
+              "room-2"
+            ]
+          },
+          {
+            "type": "OVAL",
+            "x": 200,
+            "y": 150,
+            "width": 30,
+            "height": 50,
+            "rotation": 15,
+            "colourIndex": 2,
+            "text": "Plant",
+            "action": "NONE",
+            "actionParameters": []
+          }
+        ]
+      },
+      {
+        "drawingID": "room-2",
+        "colourIndex": 7,
+        "height": 579,
+        "width": 792,
+        "shapes": [
+          {
+            "type": "RECTANGLE",
+            "table": "2",
+            "chair": "1",
+            "x": 195,
+            "y": 70,
+            "width": 20,
+            "height": 20,
+            "rotation": 0,
+            "colourIndex": 11,
+            "text": "1",
+            "action": "TABLE",
+            "actionParameters": []
+          },
+          {
+            "type": "OVAL",
+            "table": "2",
+            "x": 220,
+            "y": 65,
+            "width": 30,
+            "height": 55,
+            "rotation": 90,
+            "colourIndex": 6,
+            "text": "2",
+            "action": "TABLE",
+            "actionParameters": []
+          },
+          {
+            "type": "RECTANGLE",
+            "table": "2",
+            "chair": "2",
+            "x": 255,
+            "y": 70,
+            "width": 20,
+            "height": 20,
+            "rotation": 0,
+            "colourIndex": 11,
+            "text": "2",
+            "action": "TABLE",
+            "actionParameters": []
+          },
+          {
+            "type": "RECTANGLE",
+            "x": 732,
+            "y": 529,
+            "width": 50,
+            "height": 40,
+            "rotation": 0,
+            "colourIndex": 0,
+            "text": "Back",
+            "action": "BACK",
+            "actionParameters": []
+          },
+          {
+            "type": "UNDEFINED",
+            "x": 300,
+            "y": 150,
+            "width": 40,
+            "height": 30,
+            "rotation": 0,
+            "colourIndex": 8,
+            "action": "NONE",
+            "actionParameters": []
+          }
+        ]
+      }
+    ]
 ```
 
 <a name="receipt-types"></a>
