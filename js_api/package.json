@@ -2,13 +2,16 @@
   "name": "@jaakaru/softpos_api",
   "version": "0.1.56",
   "description": "Restolution SoftPoS Javascript API",
+  "scripts": {
+    "test": "node --test"
+  },
   "license": "MIT",
-  "repository": "Soft-Contact/resto",
+  "repository": "restolutioneu/resto",
   "main": "index.js",
   "keywords": [
     "softpos",
     "restolution",
-    "soft-contact",
+    "restolutioneu",
     "cashregister"
   ],
   "dependencies": {}

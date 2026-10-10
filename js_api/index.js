@@ -292,7 +292,9 @@ const softPos = {
                 if (loyaltyJson === undefined) {
                     loyaltyJson = "";
                 }
-                const escapedString = loyaltyJson.replace(/"/g, '\\"');
+                const escapedString = loyaltyJson
+                    .replace(/\\/g, '\\\\')
+                    .replace(/"/g, '\\"');
                 const cmd = "(sok-ssc-set-transaction-loyalty " + escapedString + ")";
                 let result = window.softPos.evalLisp(cmd);
                 parseResultAndMakeCallbacks(result, failureCallback, successCallback);
