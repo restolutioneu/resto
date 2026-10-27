@@ -4017,12 +4017,7 @@ sample request:
   "timestamp": "2015-09-16T08:58:40Z",
   "apiKey": "user_283764",
   "requestID": "req_28376429",
-  "method": "getTableCharts",
-  "params": {
-    "cardNumbers": [
-      "123-456"
-    ]
-  }
+  "method": "getTableCharts"
 }
 ```
 
