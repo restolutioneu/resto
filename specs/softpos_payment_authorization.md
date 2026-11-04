@@ -190,6 +190,7 @@ For checking balance of a card.
 parameters:
 
 * `cardNumber` - string containing the card number
+* `shortCode` - string containing the card short code (optional but prioritized over cardNumber if used in request)
 
 response:
 
