@@ -196,7 +196,7 @@ response:
 
 * `balance` - current balance of the card
 
-sample request:
+sample request with cardNumber:
 
 ```json 
 {
@@ -208,6 +208,21 @@ sample request:
     "method":"checkBalance",
     "params":{
         "cardNumber":"123-456"
+    }
+}
+```
+sample request with shortCode:
+
+```json 
+{
+    "timestamp":"2015-09-16T08:58:40Z",
+    "apiKey":"user_283764",
+    "requestID":"req_28376429",
+    "cashRegisterUUID":"c28f32b5-e650-45fb-b11a-d3e0440684d4",
+    "businessUnitUUID":"be214e6d-a801-4021-8905-d704ad677eab",
+    "method":"checkBalance",
+    "params":{
+        "shortCode":"A13HJ8Z"
     }
 }
 ```
